@@ -28,7 +28,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="index.html">
+            <a class="m-link" href="index.html">
               <i class="fa-regular fa-gauge-high"></i>
               <span> التقارير </span>
             </a>
@@ -42,7 +42,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="clints.html">
+            <a class="m-link active" href="clints.html">
               <i class="fa-regular fa-user-tie"></i>
               <span> العملاء </span>
             </a>
@@ -229,7 +229,6 @@
                           </div>
                         </a>
                       </li>
-
                       <li class="py-2 mb-1 border-bottom">
                         <a href="javascript:void(0);" class="d-flex">
                           <div class="flex-fill ms-3">
@@ -289,7 +288,6 @@
                 </div>
               </div>
             </li>
-
             <!-- profile -->
             <li class="dropdown morphing scale-left user-profile mx-lg-3 mx-2">
               <a class="nav-link dropdown-toggle rounded-circle after-none p-0" href="#" role="button"
@@ -326,7 +324,7 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> التقارير </li>
+              <li class="breadcrumb-item active" aria-current="page"> العملاء </li>
             </ol>
           </div>
         </div>
@@ -336,7 +334,162 @@
     <div class="page-body px-xl-4 px-sm-2 px-0 py-lg-2 py-1 mt-0 mt-lg-3">
       <div class="container-fluid">
         <!-- put your content here -->
-
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title m-0"> العملاء </h6>
+            <!-- widgest  -->
+            <div class="dropdown morphing scale-right d-flex align-items-center gap-3">
+              <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClint"> اضافة عميل </a>
+              <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
+                <i class="icon-size-fullscreen"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- data table -->
+            <table id="dataTable" class="table myDataTable align-middle custom-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>اسم العميل </th>
+                  <th>البريد الالكتروني </th>
+                  <th>كلمة المرور </th>
+                  <th> ادارة </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <h6 class="m-0 fw-bold"> عماد مجدي </h6>
+                  </td>
+                  <td>
+                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
+                  </td>
+                  <td> 123456 </td>
+                  <td>
+                    <!-- edit -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
+                      <span class="btn btn-link btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" تعديل "> <i class="fa-regular fa-pen-to-square"></i> </span>
+                    </a>
+                    <!-- delete -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#deleteClint">
+                      <span class="btn btn-link btn-sm text-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" حذف "> <i class="fa-regular fa-trash-can"></i> </span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <h6 class="m-0 fw-bold"> محمد جمال </h6>
+                  </td>
+                  <td>
+                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
+                  </td>
+                  <td> 123456 </td>
+                  <td>
+                    <!-- edit -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
+                      <span class="btn btn-link btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" تعديل "> <i class="fa-regular fa-pen-to-square"></i> </span>
+                    </a>
+                    <!-- delete -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#deleteClint">
+                      <span class="btn btn-link btn-sm text-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" حذف "> <i class="fa-regular fa-trash-can"></i> </span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <h6 class="m-0 fw-bold"> محمد العشري </h6>
+                  </td>
+                  <td>
+                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
+                  </td>
+                  <td> 123456 </td>
+                  <td>
+                    <!-- edit -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
+                      <span class="btn btn-link btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" تعديل "> <i class="fa-regular fa-pen-to-square"></i> </span>
+                    </a>
+                    <!-- delete -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#deleteClint">
+                      <span class="btn btn-link btn-sm text-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" حذف "> <i class="fa-regular fa-trash-can"></i> </span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <h6 class="m-0 fw-bold"> احمد مصطفي </h6>
+                  </td>
+                  <td>
+                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
+                  </td>
+                  <td> 123456 </td>
+                  <td>
+                    <!-- edit -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
+                      <span class="btn btn-link btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" تعديل "> <i class="fa-regular fa-pen-to-square"></i> </span>
+                    </a>
+                    <!-- delete -->
+                    <a href="#!" data-bs-toggle="modal" data-bs-target="#deleteClint">
+                      <span class="btn btn-link btn-sm text-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title=" حذف "> <i class="fa-regular fa-trash-can"></i> </span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- modal -->
+          <div class="modal fade " id="addClint" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered ">
+              <div class="modal-content ">
+                <!-- header -->
+                <div class="modal-header">
+                  <h6 class="modal-title fw-bold"> اضافة عميل </h6>
+                  <button type="button" class="btn-close ms-auto me-0" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                  <form class="row g-3" action="">
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <label class="form-label"> اسم العميل </label>
+                        <input type="email" class="form-control form-control-lg" placeholder="مثال : محمد محمود ">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <label class="form-label"> البريد الالكتروني </label>
+                        <input type="email" class="form-control form-control-lg" placeholder="name@example.com">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <div class="form-label"> كلمة المرور </div>
+                        <input id="password" class="form-control form-control-lg" type="password"
+                          placeholder=" ادخل كلمة المرور ">
+                      </div>
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                      <button type="submit" class="btn btn-lg btn-block btn-dark lift text-uppercase"> اضافة </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
@@ -362,6 +515,39 @@
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <script src="assets/js/theme.js">  </script>
+  <script src="assets/js/bundle/dataTables.bundle.js"></script>
+  <script>
+    // Data Table
+    $('#dataTable').addClass('nowrap').dataTable({
+      responsive: true,
+      searching: true,
+      paging: true,
+      ordering: false,
+      info: false,
+      "language": {
+        "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
+        "sInfo": "عرض السجلات _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+        "sInfoEmpty": "عرض السجلات 0 إلى 0 من أصل 0 مدخل",
+        "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+        "sInfoPostFix": "",
+        "sLengthMenu": "أظهر _MENU_ مُدخل",
+        "sLoadingRecords": "جارٍ التحميل...",
+        "sProcessing": "جارٍ المعالجة...",
+        "sSearch": "البحث:",
+        "sZeroRecords": "لم يتم العثور على أية سجلات",
+        "oPaginate": {
+          "sFirst": "الأول",
+          "sLast": "الأخير",
+          "sNext": "التالي",
+          "sPrevious": "السابق"
+        },
+        "oAria": {
+          "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
+          "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>

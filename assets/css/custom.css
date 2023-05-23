@@ -4,6 +4,7 @@
   src: url(../fonts/IBMPlexSansArabic-Regular.ttf);
 }
 [data-nami=theme-blue] {
+  --body-color: #f2f2f2;
   --primary-color: #028692;
   --secondary-color: #00b6c7;
   --primary-rgb: 2, 134, 146;
