@@ -57,7 +57,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="projects.html">
+            <a class="m-link" href="projects.html">
               <i class="fa-regular fa-rectangle-history"></i>
               <span> المشاريع </span>
             </a>
@@ -71,7 +71,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="dailyTasks.html">
+            <a class="m-link active" href="dailyTasks.html">
               <i class="fa-regular fa-list-radio"></i>
               <span> المهام اليومية </span>
             </a>
@@ -326,7 +326,7 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> المشاريع </li>
+              <li class="breadcrumb-item active" aria-current="page"> المهام اليومية </li>
             </ol>
           </div>
         </div>
@@ -338,10 +338,11 @@
         <!-- put your content here -->
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title m-0"> المشاريع </h6>
+            <h6 class="card-title m-0"> المهام اليومية </h6>
             <!-- widgest  -->
             <div class="d-flex align-items-center gap-3">
-              <a href="add-project.html" class="btn btn-primary"> اضافة مشروع </a>
+              <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add"> اضافة مهمة يومية
+              </a>
               <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
                 <i class="icon-size-fullscreen"></i>
               </a>
@@ -352,15 +353,10 @@
             <table id="dataTable" class="table myDataTable align-middle custom-table">
               <thead>
                 <tr>
-                  <th> اسم المشروع </th>
-                  <th> الرقم </th>
-                  <th> العميل </th>
-                  <th> مدير المشروع </th>
-                  <th> تاريخ بداية المشروع </th>
-                  <th> تاريخ نهاية المشروع </th>
-                  <th> الموقع </th>
+                  <th> رقم المهمة يومية </th>
+                  <th> التاريخ </th>
+                  <th> تفاصيل المهام </th>
                   <th> مرفقات </th>
-                  <th> المواد المستخدمة </th>
                   <th> ملاحظات </th>
                 </tr>
               </thead>
@@ -371,50 +367,29 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                </tr>
                 <tr>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                </tr>
                 <tr>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                </tr>
                 <tr>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                </tr>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -424,7 +399,60 @@
               </tbody>
             </table>
           </div>
-
+          <!-- modal -->
+          <div class="modal fade " id="add" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg ">
+              <div class="modal-content ">
+                <!-- header -->
+                <div class="modal-header">
+                  <h6 class="modal-title fw-bold"> اضافة مهمة يومية </h6>
+                  <button type="button" class="btn-close ms-auto me-0" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                  <form class="row g-3" action="">
+                    <div class="col-md-6 col-xl-4">
+                      <div class="mb-2">
+                        <label class="form-label"> رقم المهمة يومية </label>
+                        <input type="number" class="form-control form-control-lg" placeholder=" اكتب هنا ">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="mb-2">
+                        <div class="form-label"> التاريخ </div>
+                        <input type="date" class="form-control form-control-lg">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                      <div class="mb-2">
+                        <label class="form-label"> مرفقات </label>
+                        <input type="file" class="form-control form-control-lg" multiple placeholder="name@example.com">
+                      </div>
+                    </div>
+                    
+                  
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <label class="form-label small"> تفاصيل المهام  </label>
+                        <textarea class="form-control form-control-lg" rows="5"></textarea>
+                      </div>
+                    </div>
+                  
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <label class="form-label small"> ملاحظات </label>
+                        <textarea class="form-control form-control-lg" rows="5"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                      <button type="submit" class="btn btn-lg btn-block btn-dark lift text-uppercase"> اضافة </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
