@@ -176,16 +176,14 @@ body {
   }
 }
 .card {
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     border-radius: 1rem;
-
   }
   border-radius: 1.75rem;
   .card-header {
     border-radius: 1.75rem 1.75rem 0 0;
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       border-radius: 1rem 1rem 0 0;
-
     }
   }
 }
@@ -243,4 +241,15 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #2d4557 !important;
   border-radius: 10px;
+}
+
+.select2-container .select2-selection {
+  min-height: calc(1.5em + 1.8rem + 2px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  margin-bottom: 0;
 }

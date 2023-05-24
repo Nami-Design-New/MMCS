@@ -9,6 +9,8 @@
   <meta name="keyword" content=" maintenance management  computerized system ">
   <link rel="icon" href="assets/img/fav.svg" type="image/x-icon">
   <title> MMCS </title>
+  <!-- select2  -->
+  <link rel="stylesheet" href="assets/cssbundle/select2.min.css">
   <!-- main styles -->
   <link rel="stylesheet" href="assets/css/all.css">
   <link rel="stylesheet" href="assets/css/styleAR.css">
@@ -50,7 +52,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="permissions.html">
+            <a class="m-link" href="permissions.html">
               <i class="fa-regular fa-shield-check"></i>
               <span> الصلاحيات </span>
             </a>
@@ -64,7 +66,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="work-order.html">
+            <a class="m-link active" href="work-order.html">
               <i class="fa-regular fa-sheet-plastic"></i>
               <span> أوامر العمل </span>
             </a>
@@ -326,8 +328,8 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item"> <a class="text-secondary" href="permissions.html"> الصلاحيات </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> اضافة صلاحية </li>
+              <li class="breadcrumb-item"> <a class="text-secondary" href="projects.html"> أوامر العمل </a> </li>
+              <li class="breadcrumb-item active" aria-current="page"> اضافة أمر عمل </li>
             </ol>
           </div>
         </div>
@@ -339,7 +341,7 @@
         <!-- put your content here -->
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title m-0"> اضافة صلاحية </h6>
+            <h6 class="card-title m-0"> اضافة أمر عمل </h6>
             <!-- widgest  -->
             <div class="d-flex align-items-center gap-3">
               <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
@@ -349,74 +351,73 @@
           </div>
           <div class="card-body ">
 
-            <form class="row permissions" action="permissions.html">
+            <form class="row" action="projects.html">
+
+              <div class="col-md-6 col-lg-4">
+                <div class="mb-2">
+                  <label class="form-label"> الرقم </label>
+                  <input type="number" class="form-control form-control-lg" placeholder="اكتب هنا">
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="mb-2">
+                  <label class="form-label"> الاسم </label>
+                  <input type="text" class="form-control form-control-lg" placeholder="اكتب هنا">
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="mb-2">
+                  <label class="form-label"> المشروع </label>
+                  <select class="form-control form-control-lg show-tick ms select2"  data-placeholder="اختر">
+                    <option> مشروع 1 </option>
+                    <option> مشروع 2 </option>
+                    <option> مشروع 3 </option>
+                    <option> مشروع 4 </option>
+                    <option> مشروع 5 </option>
+                    <option> مشروع 6 </option>
+                    
+                  </select>
+                </div>
+              </div>
+              
+              <div class="col-md-6 col-lg-4">
+                <div class="mb-2">
+                  <label class="form-label"> تاريخ بداية المشروع </label>
+                  <input type="date" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="mb-2">
+                  <label class="form-label"> تاريخ نهاية المشروع </label>
+                  <input type="date" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="mb-2">
+                  <label class="form-label small"> مرفقات </label>
+                  <input type="file" multiple class="form-control form-control-lg">
+                </div>
+              </div>
               <div class="col-12">
                 <div class="mb-2">
-                  <label class="form-label"> اسم الصلاحية </label>
-                  <input type="text" class="form-control form-control-lg" placeholder=" مثال :  مشرف    ">
+                  <label class="form-label small"> المواد المستخدمة </label>
+                  <select class="form-control form-control-lg show-tick ms select2" multiple data-placeholder="اختر">
+                    <option> خشب </option>
+                    <option> الومنيوم </option>
+                    <option> حديد </option>
+                    <option> خشب </option>
+                    <option> الومنيوم </option>
+                    <option> حديد </option>
+                    <option> خشب </option>
+                    <option> الومنيوم </option>
+                    <option> حديد </option>
+                  </select>
                 </div>
               </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission1"> صلاحية 1 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission1">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission2"> صلاحية 2 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission2">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission3"> صلاحية 3 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission3">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission4"> صلاحية 4 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission4">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission5"> صلاحية 5 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission5">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission6"> صلاحية 6 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission6">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission7"> صلاحية 7 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission7">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission8"> صلاحية 8 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission8">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission9"> صلاحية 9 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission9">
+              <div class="col-12">
+                <div class="mb-2">
+                  <label class="form-label small"> ملاحظات </label>
+                  <textarea class="form-control form-control-lg" rows="5"></textarea>
                 </div>
               </div>
 
@@ -452,6 +453,10 @@
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <script src="assets/js/theme.js">  </script>
+  <script src="assets/js/bundle/select2.bundle.js">  </script>
+  <script>
+    $('.select2').select2()
+  </script>
 
 
 </body>

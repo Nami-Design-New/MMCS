@@ -50,7 +50,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="permissions.html">
+            <a class="m-link" href="permissions.html">
               <i class="fa-regular fa-shield-check"></i>
               <span> الصلاحيات </span>
             </a>
@@ -64,7 +64,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="work-order.html">
+            <a class="m-link active" href="work-order.html">
               <i class="fa-regular fa-sheet-plastic"></i>
               <span> أوامر العمل </span>
             </a>
@@ -326,8 +326,7 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item"> <a class="text-secondary" href="permissions.html"> الصلاحيات </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> اضافة صلاحية </li>
+              <li class="breadcrumb-item active" aria-current="page"> أوامر العمل </li>
             </ol>
           </div>
         </div>
@@ -339,93 +338,82 @@
         <!-- put your content here -->
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title m-0"> اضافة صلاحية </h6>
+            <h6 class="card-title m-0"> أوامر العمل </h6>
             <!-- widgest  -->
             <div class="d-flex align-items-center gap-3">
+              <a href="add-work-order.html" class="btn btn-primary"> اضافة أمر عمل </a>
               <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
                 <i class="icon-size-fullscreen"></i>
               </a>
             </div>
           </div>
-          <div class="card-body ">
-
-            <form class="row permissions" action="permissions.html">
-              <div class="col-12">
-                <div class="mb-2">
-                  <label class="form-label"> اسم الصلاحية </label>
-                  <input type="text" class="form-control form-control-lg" placeholder=" مثال :  مشرف    ">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission1"> صلاحية 1 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission1">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission2"> صلاحية 2 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission2">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission3"> صلاحية 3 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission3">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission4"> صلاحية 4 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission4">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission5"> صلاحية 5 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission5">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission6"> صلاحية 6 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission6">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission7"> صلاحية 7 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission7">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission8"> صلاحية 8 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission8">
-                </div>
-              </div>
-              <!-- permission -->
-              <div class="col-sm-6 col-lg-4 col-xl-3 p-2">
-                <div class="form-check form-switch">
-                  <label class="form-check-label" for="permission9"> صلاحية 9 </label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="permission9">
-                </div>
-              </div>
-
-              <div class="col-12 text-center mt-4">
-                <button type="submit" class="btn btn-lg btn-block btn-dark lift text-uppercase"> اضافة </button>
-              </div>
-            </form>
-
+          <div class="card-body">
+            <!-- data table -->
+            <table id="dataTable" class="table myDataTable align-middle custom-table">
+              <thead>
+                <tr>
+                  <th> الرقم </th>
+                  <th> الاسم </th>
+                  <th> المشروع </th>
+                  <th> تاريخ البداية </th>
+                  <th> تاريخ النهاية </th>
+                  <th> المواد المستخدمة </th>
+                  <th> مرفقات </th>
+                  <th> ملاحظات </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+          
+                </tr>
+              </tbody>
+            </table>
           </div>
+
         </div>
       </div>
     </div>
@@ -452,8 +440,39 @@
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <script src="assets/js/theme.js">  </script>
-
-
+  <script src="assets/js/bundle/dataTables.bundle.js"></script>
+  <script>
+    // Data Table
+    $('#dataTable').addClass('nowrap').dataTable({
+      responsive: true,
+      searching: true,
+      paging: true,
+      ordering: false,
+      info: false,
+      "language": {
+        "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
+        "sInfo": "عرض السجلات _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+        "sInfoEmpty": "عرض السجلات 0 إلى 0 من أصل 0 مدخل",
+        "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+        "sInfoPostFix": "",
+        "sLengthMenu": "أظهر _MENU_ مُدخل",
+        "sLoadingRecords": "جارٍ التحميل...",
+        "sProcessing": "جارٍ المعالجة...",
+        "sSearch": "البحث:",
+        "sZeroRecords": "لم يتم العثور على أية سجلات",
+        "oPaginate": {
+          "sFirst": "الأول",
+          "sLast": "الأخير",
+          "sNext": "التالي",
+          "sPrevious": "السابق"
+        },
+        "oAria": {
+          "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
+          "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>

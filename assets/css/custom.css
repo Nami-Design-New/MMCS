@@ -258,4 +258,16 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #2d4557 !important;
   border-radius: 10px;
+}
+
+.select2-container .select2-selection {
+  min-height: calc(1.5em + 1.8rem + 2px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  margin-bottom: 0;
 }/*# sourceMappingURL=custom.css.map */
