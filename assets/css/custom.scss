@@ -213,7 +213,6 @@ body {
 .apexcharts-menu-item {
   white-space: nowrap;
 }
-
 .permissions {
   .form-switch {
     display: flex;
@@ -225,7 +224,6 @@ body {
     border: 1px dashed var(--border-color);
   }
 }
-
 [type="search"],
 [type="email"],
 [type="number"],
@@ -234,7 +232,6 @@ body {
   direction: ltr;
   text-align: end;
 }
-
 ::-webkit-scrollbar-track {
   background: #455662 !important;
 }
@@ -242,7 +239,6 @@ body {
   background-color: #2d4557 !important;
   border-radius: 10px;
 }
-
 .select2-container .select2-selection {
   min-height: calc(1.5em + 1.8rem + 2px);
   display: flex;
@@ -252,4 +248,172 @@ body {
 }
 .select2-container .select2-selection--multiple .select2-selection__rendered {
   margin-bottom: 0;
+}
+textarea.form-control {
+  border-radius: 0.5rem;
+}
+.calendar {
+  .months {
+    display: flex;
+    align-items: flex-end;
+    p {
+      display: inline-block;
+      padding: 5px 20px;
+      text-align: center;
+      margin: 0;
+      span {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: larger;
+        display: block;
+      }
+    }
+    .icon {
+      min-width: 40px;
+      height: 40px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 1000px;
+      border: 1px solid #eee;
+      padding: 5px;
+      margin: 0;
+    }
+  }
+  .calendarBody,
+  .calendarHead {
+    display: grid;
+    grid-template-columns: 13.7% 13.7% 13.7% 13.7% 13.7% 13.7% 13.7%;
+    grid-column-gap: 0.6%;
+    grid-row-gap: 1.2%;
+    margin: 20px 0;
+    .day {
+      padding: 15px 10px 10px;
+      text-align: center;
+    }
+  }
+  .calendarHead {
+    background-color: var(--body-color);
+    border-radius: 10px;
+    .day {
+      padding: 10px;
+      border-left: 1px solid var(--secondary-color);
+      font-size: larger;
+      font-weight: bold;
+      &:last-child {
+        border-left: none;
+      }
+    }
+  }
+  .calendarBody {
+    .day {
+      border: 1px solid #eee;
+      border-radius: 5px;
+      // min-height: 70px;
+      transition: 0.3s ease-in-out;
+      position: relative;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .events {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .event {
+          padding: 4px;
+          background-color: var(--body-color);
+          font-size: 12px;
+          margin: 0;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+      .num {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      &:hover {
+        box-shadow: 0px 10px 30px #00000030;
+        transform: scale(1.02);
+        z-index: 2;
+      }
+      &.prevMonth {
+        background-color: #eee;
+        box-shadow: unset;
+        &:hover {
+          box-shadow: unset;
+          transform: unset;
+          z-index: unset;
+        }
+        .num {
+          font-size: unset;
+          font-weight: unset;
+          color: #999;
+        }
+      }
+      &.active {
+        background-color: var(--secondary-color);
+        .num {
+          color: #fff;
+        }
+      }
+    }
+  }
+  @media (max-width: 678px) {
+    .calendarBody,
+    .calendarHead {
+      .day {
+        padding: 5px;
+      }
+    }
+    .calendarHead {
+      .day {
+        font-size: small;
+        padding: 4px;
+      }
+    }
+    .calendarBody {
+      .day {
+        position: relative;
+        background-color: #fff;
+        .events {
+          .event {
+            padding: 10px;
+            span {
+              display: none;
+            }
+          }
+        }
+        .num {
+          font-size: small;
+          font-weight: bold;
+        }
+        &:hover {
+          box-shadow: 0px 10px 30px #00000030;
+          transform: scale(1.02);
+          z-index: 2;
+        }
+        &.prevMonth {
+          background-color: #eee;
+          box-shadow: unset;
+          &:hover {
+            box-shadow: unset;
+            transform: unset;
+            z-index: unset;
+          }
+          .num {
+            font-size: unset;
+            font-weight: unset;
+            color: #999;
+          }
+        }
+        &.active {
+          background-color: var(--secondary-color);
+          color: #fff;
+        }
+      }
+    }
+  }
 }

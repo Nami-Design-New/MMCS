@@ -43,7 +43,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="clints.html">
+            <a class="m-link active" href="clints.html">
               <i class="fa-regular fa-user-tie"></i>
               <span> العملاء </span>
             </a>
@@ -57,7 +57,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="projects.html">
+            <a class="m-link" href="projects.html">
               <i class="fa-regular fa-rectangle-history"></i>
               <span> المشاريع </span>
             </a>
@@ -326,7 +326,7 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> المشاريع </li>
+              <li class="breadcrumb-item active" aria-current="page"> مواعيد اجتماعات زوم </li>
             </ol>
           </div>
         </div>
@@ -338,93 +338,218 @@
         <!-- put your content here -->
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title m-0"> المشاريع </h6>
+            <h6 class="card-title m-0"> مواعيد اجتماعات زوم </h6>
             <!-- widgest  -->
             <div class="d-flex align-items-center gap-3">
-              <a href="add-project.html" class="btn btn-primary"> اضافة مشروع </a>
+              <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add"> اضافة موعد </a>
               <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
                 <i class="icon-size-fullscreen"></i>
               </a>
             </div>
           </div>
           <div class="card-body">
-            <!-- data table -->
-            <table id="dataTable" class="table myDataTable align-middle custom-table">
-              <thead>
-                <tr>
-                  <th> اسم المشروع </th>
-                  <th> الرقم </th>
-                  <th> العميل </th>
-                  <th> مدير المشروع </th>
-                  <th> تاريخ بداية المشروع </th>
-                  <th> تاريخ نهاية المشروع </th>
-                  <th> الموقع </th>
-                  <th> مرفقات </th>
-                  <th> المواد المستخدمة </th>
-                  <th> ملاحظات </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- calendar -->
+            <div class="calendar">
+              <div class="row justify-content-between align-items-end">
+                <div class="col text-center text-sm-start">
+                  <button class="btn btn-primary"> اليوم </button>
+                </div>
+                <div class="col">
+                  <div class="months justify-content-center justify-content-lg-end">
+                    <button class=" icon prev"> <i class="fad fa-chevron-right"></i> </button>
+                    <p> 2023 <span> اكتوبر </span> </p>
+                    <button class=" icon next"> <i class="fad fa-chevron-left"></i> </button>
+                  </div>
+                </div>
+              </div>
+              <div class="calendarHead">
+                <div class="day"> سبت </div>
+                <div class="day"> أحد </div>
+                <div class="day"> أثنين </div>
+                <div class="day"> ثلاثاء </div>
+                <div class="day"> اربعاء </div>
+                <div class="day"> خميس </div>
+                <div class="day"> جمعة </div>
+              </div>
+              <div class="calendarBody">
+                <div class="day prevMonth">
+                  <span class="num"> 28</span>
+                </div>
+                <div class="day prevMonth">
+                  <span class="num"> 29</span>
+                </div>
+                <div class="day prevMonth">
+                  <span class="num"> 30</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 01</span>
+                  <div class="events">
+                    <p class="event" data-bs-toggle="modal" data-bs-target="#details"> <span> اجتماع مجلس الادارة
+                      </span> </p>
+                    <p class="event" data-bs-toggle="modal" data-bs-target="#details"> <span> اجتماع HR </span> </p>
+                  </div>
+                </div>
+                <div class="day">
+                  <span class="num"> 02</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 03</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 04</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 05</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 06</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 07</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 08</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 09</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 10</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 11</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 12</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 13</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 14</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 15</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 16</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 17</span>
+                </div>
+                <div class="day active">
+                  <span class="num"> 18</span>
+                  <div class="events">
+                    <p class="event" data-bs-toggle="modal" data-bs-target="#details"> <span> اجتماع مجلس الادارة
+                      </span> </p>
+                    <p class="event" data-bs-toggle="modal" data-bs-target="#details"> <span> اجتماع HR </span> </p>
+                  </div>
+                </div>
+                <div class="day">
+                  <span class="num"> 19</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 20</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 21</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 22</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 23</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 24</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 25</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 26</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 27</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 28</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 29</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 30</span>
+                </div>
+                <div class="day">
+                  <span class="num"> 31</span>
+                </div>
+                <div class="day prevMonth">
+                  <span class="num"> 1 </span>
+                </div>
+              </div>
+            </div>
           </div>
-
+          <!-- modal -->
+          <div class="modal fade " id="add" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered ">
+              <div class="modal-content ">
+                <!-- header -->
+                <div class="modal-header">
+                  <h6 class="modal-title fw-bold"> اضافة عميل </h6>
+                  <button type="button" class="btn-close ms-auto me-0" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                  <form class="row g-3" action="">
+                    <div class="col-md-6">
+                      <div class="mb-2">
+                        <label class="form-label"> العنوان </label>
+                        <input type="text " class="form-control form-control-lg" placeholder=" اكتب هنا ">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-2">
+                        <div class="form-label"> التاريخ </div>
+                        <input type="date" class="form-control form-control-lg">
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <label class="form-label small"> التفاصيل </label>
+                        <textarea class="form-control form-control-lg" rows="5"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                      <button type="submit" class="btn btn-lg btn-block btn-dark lift text-uppercase"> اضافة </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal -->
+          <div class="modal fade " id="details" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered ">
+              <div class="modal-content ">
+                <!-- header -->
+                <div class="modal-header">
+                  <h6 class="modal-title fw-bold"> اجتماع مجلس الادارة </h6>
+                  <button type="button" class="btn-close ms-auto me-0" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum veritatis dolor dolorem quod.
+                    Inventore quisquam, ab commodi obcaecati quam eveniet nihil aspernatur distinctio hic nostrum
+                    deserunt veritatis, repudiandae minima vitae!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
