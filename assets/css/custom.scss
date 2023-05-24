@@ -9,9 +9,9 @@
   --secondary-color: #00b6c7;
   --primary-rgb: 2, 134, 146;
   --secondary-rgb: 0, 182, 199;
-  --chart-color1: #2794eb;
-  --chart-color2: #6382d8;
-  --chart-color3: #8d61a5;
+  --chart-color1: #028692;
+  --chart-color2: #00b6c7;
+  --chart-color3: #00ac9a;
   --chart-color4: #90476f;
   --chart-color5: #00ac9a;
   --primary-gradient: linear-gradient(
@@ -60,7 +60,6 @@ a {
 // .modal-backdrop{
 //   --bs-backdrop-zindex: 9999998;
 // }
-
 .dataTables_wrapper {
   gap: 16px;
   display: flex;
@@ -91,4 +90,121 @@ a {
   .child .child {
     padding: 8px 4px 24px;
   }
+}
+// new style
+.layout-1 .sidebar {
+  overflow-y: auto;
+  background-color: #455662;
+  .sidebar-title {
+    color: #fff;
+    font-weight: bold;
+  }
+  &.sidebar-mini {
+    background-color: #455662;
+    .menu-list > li > .sub-menu {
+      background: #455662;
+      border-right: 10px solid #3f4e58;
+      border-radius: 16px 0 0 16px;
+      &::after {
+        display: none;
+      }
+      li .ms-link {
+        border-color: #58656e;
+        color: #ececec;
+        &:hover,
+        &.active {
+          color: var(--secondary-color);
+        }
+      }
+    }
+    .logOut{
+      span{
+        display: none;
+      }
+    }
+  }
+  .menu-list {
+    border-color: #58656e;
+    .divider {
+      color: #fff;
+    }
+    .m-link {
+      color: #ececec;
+      padding: 12px 0px;
+    }
+    .ms-link {
+      color: #c5c5c5;
+    }
+    & > li {
+      border-color: #58656e;
+    }
+  }
+}
+.layout-1 .wrapper .page-header {
+  border-bottom-color: transparent;
+  border-radius: 0 32px 0 0;
+  background-color: #f2f2f2;
+  @media screen and (max-width: 1200px) {
+    border-radius: 0;
+  }
+}
+body {
+  background-color: #455662;
+}
+.logOut{
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #58656e;
+  gap: 8px;
+  border-radius: 16px;
+  color: #fff;
+  width: calc(100% - 24px);
+  // margin: auto;
+}
+.layout-1 .wrapper {
+  background-color: #f2f2f2;
+  border-radius: 0 32px 32px 0;
+  @media screen and (max-width: 1200px) {
+    border-radius: 0;
+  }
+}
+.wrapper {
+  @media screen and (min-width: 1200px) {
+    padding: 0 8px;
+  }
+}
+.card {
+  border-radius: 1.75rem;
+  .card-header {
+    border-radius: 1.75rem 1.75rem 0 0;
+  }
+}
+.radius-0{
+  border-radius: 0 !important;
+}
+// end new style
+
+
+.apexcharts-legend-text,
+.apexcharts-tooltip *,
+.apexcharts-tooltip-title,
+.apexcharts-text tspan ,
+.apexcharts-canvas  text{
+  font-family: "IBMPlexSansArabic", sans-serif !important;
+}
+.apexcharts-text tspan {
+  direction: ltr;
+}
+.apexcharts-legend-marker {
+  margin-right: 0 !important;
+  margin-left: 3px;
+}
+.apexcharts-tooltip-marker {
+  margin-left: 8px;
+  margin-right: 0px !important;
+}
+.apexcharts-menu-item {
+  white-space: nowrap;
 }
