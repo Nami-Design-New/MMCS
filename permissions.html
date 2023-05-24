@@ -42,14 +42,14 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="clints.html">
+            <a class="m-link" href="clints.html">
               <i class="fa-regular fa-user-tie"></i>
               <span> العملاء </span>
             </a>
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="permissions.html">
+            <a class="m-link active" href="permissions.html">
               <i class="fa-regular fa-shield-check"></i>
               <span> الصلاحيات </span>
             </a>
@@ -118,7 +118,7 @@
           </li> -->
         </ul>
       </div>
-      <a href="login.html" class="logOut"> <i class="fa-duotone fa-power-off"></i> <span> تسجيل الخروج  </span> </a>
+      <a href="login.html" class="logOut"> <i class="fa-duotone fa-power-off"></i> <span> تسجيل الخروج </span> </a>
     </div>
   </div>
   <!-- content -->
@@ -325,7 +325,7 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> العملاء </li>
+              <li class="breadcrumb-item active" aria-current="page"> الصلاحيات </li>
             </ol>
           </div>
         </div>
@@ -337,10 +337,10 @@
         <!-- put your content here -->
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title m-0"> العملاء </h6>
+            <h6 class="card-title m-0"> الصلاحيات </h6>
             <!-- widgest  -->
             <div class="d-flex align-items-center gap-3">
-              <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClint"> اضافة عميل </a>
+              <a href="add-permission.html" class="btn btn-primary"> اضافة صلاحية </a>
               <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
                 <i class="icon-size-fullscreen"></i>
               </a>
@@ -352,9 +352,7 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>اسم العميل </th>
-                  <th>البريد الالكتروني </th>
-                  <th>كلمة المرور </th>
+                  <th>اسم الصلاحية </th>
                   <th> ادارة </th>
                 </tr>
               </thead>
@@ -362,12 +360,8 @@
                 <tr>
                   <td>1</td>
                   <td>
-                    <h6 class="m-0 fw-bold"> عماد مجدي </h6>
+                    <h6 class="m-0 fw-bold"> مدير النظام </h6>
                   </td>
-                  <td>
-                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
-                  </td>
-                  <td> 123456 </td>
                   <td>
                     <!-- edit -->
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
@@ -384,12 +378,8 @@
                 <tr>
                   <td>2</td>
                   <td>
-                    <h6 class="m-0 fw-bold"> محمد جمال </h6>
+                    <h6 class="m-0 fw-bold"> مشرف </h6>
                   </td>
-                  <td>
-                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
-                  </td>
-                  <td> 123456 </td>
                   <td>
                     <!-- edit -->
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
@@ -406,12 +396,8 @@
                 <tr>
                   <td>3</td>
                   <td>
-                    <h6 class="m-0 fw-bold"> محمد العشري </h6>
+                    <h6 class="m-0 fw-bold"> عميل </h6>
                   </td>
-                  <td>
-                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
-                  </td>
-                  <td> 123456 </td>
                   <td>
                     <!-- edit -->
                     <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
@@ -425,71 +411,11 @@
                     </a>
                   </td>
                 </tr>
-                <tr>
-                  <td>4</td>
-                  <td>
-                    <h6 class="m-0 fw-bold"> احمد مصطفي </h6>
-                  </td>
-                  <td>
-                    <a href="mailto:mail@mail.com "> mail@mail.com </a>
-                  </td>
-                  <td> 123456 </td>
-                  <td>
-                    <!-- edit -->
-                    <a href="#!" data-bs-toggle="modal" data-bs-target="#editClint">
-                      <span class="btn btn-link btn-sm text-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title=" تعديل "> <i class="fa-regular fa-pen-to-square"></i> </span>
-                    </a>
-                    <!-- delete -->
-                    <a href="#!" data-bs-toggle="modal" data-bs-target="#deleteClint">
-                      <span class="btn btn-link btn-sm text-danger" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title=" حذف "> <i class="fa-regular fa-trash-can"></i> </span>
-                    </a>
-                  </td>
-                </tr>
+
               </tbody>
             </table>
           </div>
-          <!-- modal -->
-          <div class="modal fade " id="addClint" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered ">
-              <div class="modal-content ">
-                <!-- header -->
-                <div class="modal-header">
-                  <h6 class="modal-title fw-bold"> اضافة عميل </h6>
-                  <button type="button" class="btn-close ms-auto me-0" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <!-- body -->
-                <div class="modal-body">
-                  <form class="row g-3" action="">
-                    <div class="col-12">
-                      <div class="mb-2">
-                        <label class="form-label"> اسم العميل </label>
-                        <input type="email" class="form-control form-control-lg" placeholder="مثال : محمد محمود ">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="mb-2">
-                        <label class="form-label"> البريد الالكتروني </label>
-                        <input type="email" class="form-control form-control-lg" placeholder="name@example.com">
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="mb-2">
-                        <div class="form-label"> كلمة المرور </div>
-                        <input id="password" class="form-control form-control-lg" type="password"
-                          placeholder=" ادخل كلمة المرور ">
-                      </div>
-                    </div>
-                    <div class="col-12 text-center mt-4">
-                      <button type="submit" class="btn btn-lg btn-block btn-dark lift text-uppercase"> اضافة </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+       
         </div>
       </div>
     </div>
@@ -521,8 +447,8 @@
     // Data Table
     $('#dataTable').addClass('nowrap').dataTable({
       responsive: true,
-      searching: true,
-      paging: true,
+      searching: false,
+      paging: false,
       ordering: false,
       info: false,
       "language": {
