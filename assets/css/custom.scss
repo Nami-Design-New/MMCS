@@ -117,8 +117,8 @@ a {
         }
       }
     }
-    .logOut{
-      span{
+    .logOut {
+      span {
         display: none;
       }
     }
@@ -151,7 +151,7 @@ a {
 body {
   background-color: #455662;
 }
-.logOut{
+.logOut {
   padding: 12px 24px;
   display: flex;
   align-items: center;
@@ -161,7 +161,7 @@ body {
   border-radius: 16px;
   color: #fff;
   width: calc(100% - 24px);
-  // margin: auto;
+  margin: auto auto 0;
 }
 .layout-1 .wrapper {
   background-color: #f2f2f2;
@@ -176,22 +176,29 @@ body {
   }
 }
 .card {
+  @media screen and (max-width:768px) {
+    border-radius: 1rem;
+
+  }
   border-radius: 1.75rem;
   .card-header {
     border-radius: 1.75rem 1.75rem 0 0;
+    @media screen and (max-width:768px) {
+      border-radius: 1rem 1rem 0 0;
+
+    }
   }
 }
-.radius-0{
+.radius-0 {
   border-radius: 0 !important;
 }
 // end new style
-
-
+.select2-container .select2-search--inline .select2-search__field,
 .apexcharts-legend-text,
 .apexcharts-tooltip *,
 .apexcharts-tooltip-title,
-.apexcharts-text tspan ,
-.apexcharts-canvas  text{
+.apexcharts-text tspan,
+.apexcharts-canvas text {
   font-family: "IBMPlexSansArabic", sans-serif !important;
 }
 .apexcharts-text tspan {
@@ -209,15 +216,23 @@ body {
   white-space: nowrap;
 }
 
-
-.permissions{
-  .form-switch{
+.permissions {
+  .form-switch {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
     border-radius: 16px;
-    border: 1px dashed  var(--border-color)    ;
+    border: 1px dashed var(--border-color);
   }
+}
+
+[type="search"],
+[type="email"],
+[type="number"],
+[type="tel"],
+[type="url"] {
+  direction: ltr;
+  text-align: end;
 }

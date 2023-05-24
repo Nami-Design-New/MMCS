@@ -4,9 +4,7 @@ function toggleFullScreen(e) {
     void 0 !== document.fullScreenElement && null === document.fullScreenElement || void 0 !== document.msFullscreenElement && null === document.msFullscreenElement || void 0 !== document.mozFullScreen && !document.mozFullScreen || void 0 !== document.webkitIsFullScreen && !document.webkitIsFullScreen ? e.requestFullScreen ? e.requestFullScreen() : e.mozRequestFullScreen ? e.mozRequestFullScreen() : e.webkitRequestFullScreen ? e.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : e.msRequestFullscreen && e.msRequestFullscreen() : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen ? document.webkitCancelFullScreen() : document.msExitFullscreen && document.msExitFullscreen()
 }
 
-window.addEventListener("load", () => {
-    document.getElementById("Changelog").outerHTML = '<span class="badge bg-primary ms-auto">v1.2.3</span>'
-}), $(function () {
+window.addEventListener("load", () => {}), $(function () {
     "use strict";
     document.documentElement;
     $(".menu-toggle").on("click", function () {
@@ -148,8 +146,4 @@ window.addEventListener("load", () => {
 }, $(document).on("contextmenu", function (e) {
     return 1
 });
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date;
-!function () {
-    var e = document.createElement("script"), t = document.getElementsByTagName("script")[0];
-    e.async = !0, e.src = "https://embed.tawk.to/5c6d4867f324050cfe342c69/default", e.charset = "UTF-8", e.setAttribute("crossorigin", "*"), t.parentNode.insertBefore(e, t)
-}();
+
