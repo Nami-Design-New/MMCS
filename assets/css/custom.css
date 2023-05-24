@@ -249,4 +249,13 @@ body {
 [type=url] {
   direction: ltr;
   text-align: end;
+}
+
+::-webkit-scrollbar-track {
+  background: #455662 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2d4557 !important;
+  border-radius: 10px;
 }/*# sourceMappingURL=custom.css.map */
