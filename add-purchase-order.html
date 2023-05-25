@@ -66,9 +66,9 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="work-order.html">
+            <a class="m-link" href="work-order.html">
               <i class="fa-regular fa-sheet-plastic"></i>
-              <span> أوامر العمل </span>
+              <span> أوامر الشراء </span>
             </a>
           </li>
           <li>
@@ -80,7 +80,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="purchase-orders.html">
+            <a class="m-link active" href="purchase-orders.html">
               <i class="fa-regular fa-bag-shopping"></i>
               <span> أوامر الشراء </span>
             </a>
@@ -335,8 +335,8 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item"> <a class="text-secondary" href="projects.html"> أوامر العمل </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> اضافة أمر عمل </li>
+              <li class="breadcrumb-item"> <a class="text-secondary" href="projects.html"> أوامر الشراء </a> </li>
+              <li class="breadcrumb-item active" aria-current="page"> اضافة أمر شراء </li>
             </ol>
           </div>
         </div>
@@ -348,7 +348,7 @@
         <!-- put your content here -->
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title m-0"> اضافة أمر عمل </h6>
+            <h6 class="card-title m-0"> اضافة أمر شراء </h6>
             <!-- widgest  -->
             <div class="d-flex align-items-center gap-3">
               <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
@@ -358,47 +358,23 @@
           </div>
           <div class="card-body ">
 
-            <form class="row" action="work-order.html">
+            <form class="row" action="purchase-orders.html">
 
               <div class="col-md-6 col-lg-4">
                 <div class="mb-2">
-                  <label class="form-label"> الرقم </label>
+                  <label class="form-label"> رقم المهمة اليومية </label>
                   <input type="number" class="form-control form-control-lg" placeholder="اكتب هنا">
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> الاسم </label>
-                  <input type="text" class="form-control form-control-lg" placeholder="اكتب هنا">
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> المشروع </label>
-                  <select class="form-control form-control-lg show-tick ms select2"  data-placeholder="اختر">
-                    <option> مشروع 1 </option>
-                    <option> مشروع 2 </option>
-                    <option> مشروع 3 </option>
-                    <option> مشروع 4 </option>
-                    <option> مشروع 5 </option>
-                    <option> مشروع 6 </option>
-                    
-                  </select>
-                </div>
-              </div>
+              
               
               <div class="col-md-6 col-lg-4">
                 <div class="mb-2">
-                  <label class="form-label"> تاريخ بداية المشروع </label>
+                  <label class="form-label"> التاريخ </label>
                   <input type="date" class="form-control form-control-lg">
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> تاريخ نهاية المشروع </label>
-                  <input type="date" class="form-control form-control-lg">
-                </div>
-              </div>
+              
               <div class="col-md-6 col-lg-4">
                 <div class="mb-2">
                   <label class="form-label small"> مرفقات </label>

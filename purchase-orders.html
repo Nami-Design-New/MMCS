@@ -9,8 +9,6 @@
   <meta name="keyword" content=" maintenance management  computerized system ">
   <link rel="icon" href="assets/img/fav.svg" type="image/x-icon">
   <title> MMCS </title>
-  <!-- select2  -->
-  <link rel="stylesheet" href="assets/cssbundle/select2.min.css">
   <!-- main styles -->
   <link rel="stylesheet" href="assets/css/all.css">
   <link rel="stylesheet" href="assets/css/styleAR.css">
@@ -66,9 +64,9 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link active" href="work-order.html">
+            <a class="m-link" href="work-order.html">
               <i class="fa-regular fa-sheet-plastic"></i>
-              <span> أوامر العمل </span>
+              <span> أوامر الشراء </span>
             </a>
           </li>
           <li>
@@ -80,7 +78,7 @@
           </li>
           <li>
             <!-- main link -->
-            <a class="m-link" href="purchase-orders.html">
+            <a class="m-link active" href="purchase-orders.html">
               <i class="fa-regular fa-bag-shopping"></i>
               <span> أوامر الشراء </span>
             </a>
@@ -335,8 +333,7 @@
           <div class="col">
             <ol class="breadcrumb bg-transparent mb-0">
               <li class="breadcrumb-item"> <a class="text-secondary" href="index.html"> الرئيسية </a> </li>
-              <li class="breadcrumb-item"> <a class="text-secondary" href="projects.html"> أوامر العمل </a> </li>
-              <li class="breadcrumb-item active" aria-current="page"> اضافة أمر عمل </li>
+              <li class="breadcrumb-item active" aria-current="page"> أوامر الشراء </li>
             </ol>
           </div>
         </div>
@@ -348,92 +345,63 @@
         <!-- put your content here -->
         <div class="card">
           <div class="card-header">
-            <h6 class="card-title m-0"> اضافة أمر عمل </h6>
+            <h6 class="card-title m-0"> أوامر الشراء </h6>
             <!-- widgest  -->
             <div class="d-flex align-items-center gap-3">
+              <a href="add-purchase-order.html" class="btn btn-primary"> اضافة أمر شراء </a>
               <a href="#" class="card-fullscreen m-0" data-bs-toggle="tooltip" title=" ملء الشاشة ">
                 <i class="icon-size-fullscreen"></i>
               </a>
             </div>
           </div>
-          <div class="card-body ">
-
-            <form class="row" action="work-order.html">
-
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> الرقم </label>
-                  <input type="number" class="form-control form-control-lg" placeholder="اكتب هنا">
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> الاسم </label>
-                  <input type="text" class="form-control form-control-lg" placeholder="اكتب هنا">
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> المشروع </label>
-                  <select class="form-control form-control-lg show-tick ms select2"  data-placeholder="اختر">
-                    <option> مشروع 1 </option>
-                    <option> مشروع 2 </option>
-                    <option> مشروع 3 </option>
-                    <option> مشروع 4 </option>
-                    <option> مشروع 5 </option>
-                    <option> مشروع 6 </option>
-                    
-                  </select>
-                </div>
-              </div>
-              
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> تاريخ بداية المشروع </label>
-                  <input type="date" class="form-control form-control-lg">
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label"> تاريخ نهاية المشروع </label>
-                  <input type="date" class="form-control form-control-lg">
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="mb-2">
-                  <label class="form-label small"> مرفقات </label>
-                  <input type="file" multiple class="form-control form-control-lg">
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-2">
-                  <label class="form-label small"> المواد المستخدمة </label>
-                  <select class="form-control form-control-lg show-tick ms select2" multiple data-placeholder="اختر">
-                    <option> خشب </option>
-                    <option> الومنيوم </option>
-                    <option> حديد </option>
-                    <option> خشب </option>
-                    <option> الومنيوم </option>
-                    <option> حديد </option>
-                    <option> خشب </option>
-                    <option> الومنيوم </option>
-                    <option> حديد </option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-2">
-                  <label class="form-label small"> ملاحظات </label>
-                  <textarea class="form-control form-control-lg" rows="5"></textarea>
-                </div>
-              </div>
-
-              <div class="col-12 text-center mt-4">
-                <button type="submit" class="btn btn-lg btn-block btn-dark lift text-uppercase"> اضافة </button>
-              </div>
-            </form>
-
+          <div class="card-body">
+            <!-- data table -->
+            <table id="dataTable" class="table myDataTable align-middle custom-table">
+              <thead>
+                <tr>
+                  <th> رقم المهمة اليومية </th>
+                  <th> التاريخ  </th>
+                  <th> المواد المستخدمة </th>
+                  <th> مرفقات </th>
+                  <th> ملاحظات </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+
         </div>
       </div>
     </div>
@@ -460,12 +428,39 @@
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <!-- ////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
   <script src="assets/js/theme.js">  </script>
-  <script src="assets/js/bundle/select2.bundle.js">  </script>
+  <script src="assets/js/bundle/dataTables.bundle.js"></script>
   <script>
-    $('.select2').select2()
+    // Data Table
+    $('#dataTable').addClass('nowrap').dataTable({
+      responsive: true,
+      searching: true,
+      paging: true,
+      ordering: false,
+      info: false,
+      "language": {
+        "sEmptyTable": "لا توجد بيانات متاحة في الجدول",
+        "sInfo": "عرض السجلات _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+        "sInfoEmpty": "عرض السجلات 0 إلى 0 من أصل 0 مدخل",
+        "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+        "sInfoPostFix": "",
+        "sLengthMenu": "أظهر _MENU_ مُدخل",
+        "sLoadingRecords": "جارٍ التحميل...",
+        "sProcessing": "جارٍ المعالجة...",
+        "sSearch": "البحث:",
+        "sZeroRecords": "لم يتم العثور على أية سجلات",
+        "oPaginate": {
+          "sFirst": "الأول",
+          "sLast": "الأخير",
+          "sNext": "التالي",
+          "sPrevious": "السابق"
+        },
+        "oAria": {
+          "sSortAscending": ": تفعيل لترتيب العمود تصاعدياً",
+          "sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
+        }
+      }
+    });
   </script>
-
-
 </body>
 
 </html>
