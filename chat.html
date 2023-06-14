@@ -492,20 +492,25 @@
   <script>
     $(document).ready(function () {
       // Selectors
-      const $chatBody = $('.chatBody');
-      const $chatInput = $('#chat-input');
-      const $chatSubmit = $('#chat-submit');
+     // const $chatBody = $('.chatBody');
+     // const $chatInput = $('#chat-input');
+     // const $chatSubmit = $('#chat-submit');
       // Event listeners
-      $chatSubmit.on('click', function (event) {
+      $('.chat-submit').on('click', function (event) {
         event.preventDefault();
+        let perantDiv = $(this).closest("div.tab-pane");
+        let $chatInput = $('.chat-input',perantDiv);
         const message = $chatInput.val().trim();
         if (!message) return;
-        generateMessage(message, 'self');
+        generateMessage(message, 'self' ,perant);
+        // start code ajax
+        // end code ajax 
         $chatInput.val('');
       });
       // Functions
-      function generateMessage(message, type) {
+      function generateMessage(message, type ,perant) {
         const date = new Date();
+        let $chatBody = $('.chatBody',perant);
         const dateString = `${date.getDate()} / ${date.getMonth() + 1} / ${date.getFullYear()}`;
         const messageHtml = `
                   <div class="userSend">
