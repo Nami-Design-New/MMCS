@@ -24872,47 +24872,7 @@ fieldset:disabled .btn {
     font-size: 1.5rem !important;
   }
 }
-@media print {
-  .d-print-inline {
-    display: inline !important;
-  }
 
-  .d-print-inline-block {
-    display: inline-block !important;
-  }
-
-  .d-print-block {
-    display: block !important;
-  }
-
-  .d-print-grid {
-    display: grid !important;
-  }
-
-  .d-print-table {
-    display: table !important;
-  }
-
-  .d-print-table-row {
-    display: table-row !important;
-  }
-
-  .d-print-table-cell {
-    display: table-cell !important;
-  }
-
-  .d-print-flex {
-    display: flex !important;
-  }
-
-  .d-print-inline-flex {
-    display: inline-flex !important;
-  }
-
-  .d-print-none {
-    display: none !important;
-  }
-}
 html {
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -30806,35 +30766,6 @@ button:focus:not(:focus-visible) {
   border: 0;
 }
 
-@media print {
-  body * {
-    visibility: hidden;
-    margin: 0;
-    color: #000;
-    background-color: #fff;
-  }
-
-  .print_invoice {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .print_invoice * {
-    visibility: visible;
-  }
-  .print_invoice * #hiderow,
-  .print_invoice * .delete {
-    display: none;
-  }
-  .print_invoice .footer-note .form-control {
-    padding: 0;
-  }
-
-  .navigation,
-  .sidebar {
-    display: none;
-  }
-}
 /* Config */
 /* Pauls awesome mixin */
 .animation-wrapper {
@@ -32752,7 +32683,7 @@ button:focus:not(:focus-visible) {
 .owl-theme .owl-dots .owl-dot {
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .owl-theme .owl-dots .owl-dot span {
   width: 10px;

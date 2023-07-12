@@ -804,3 +804,95 @@ textarea.form-control {
     object-position: top;
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap");
+* {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.print {
+  direction: ltr;
+  text-align: left;
+  // width: 210mm;
+  margin: auto;
+  background-color: white;
+  padding: 24px;
+  .printHead {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    img {
+      height: 40px;
+      object-fit: contain;
+    }
+  }
+  table {
+    margin-bottom: 16px;
+    width: 100%;
+    color: #212529;
+    vertical-align: middle;
+    caption-side: bottom;
+    border-collapse: collapse;
+    border-color: #e9e6e1;
+    thead {
+      background-color: #d8d0c3;
+      th {
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+  }
+  table > :not(caption) > * > * {
+    padding: 0.5rem 0.5rem;
+    border-bottom-width: 1px;
+  }
+
+  table {
+    tr {
+      th {
+        color: #252525;
+        text-transform: capitalize;
+        font-size: 12px;
+        border-style: solid;
+        border-color: #e9e6e1;
+        border-width: 1px;
+        padding: 12px 8px;
+      }
+      td {
+        border-style: solid;
+        border-color: #e9e6e1;
+        border-width: 1px;
+        color: #525252;
+        padding: 12px 8px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+  @media print {
+    #printBtn {
+      display: none;
+    }
+  }
+  .text-center {
+    text-align: center;
+  }
+}
+body {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+.bgColored {
+  background-color: #d8d0c3;
+  text-align: center;
+}
+.bgOrange {
+  background-color: #fc7a57;
+  text-align: center;
+}
